@@ -1,0 +1,8 @@
+.directory__icon {
+    margin-left: 12px;
+}
+
+.directory__icon:hover {
+    cursor: pointer;
+    font-size: larger;
+}
