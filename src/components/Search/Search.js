@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../Search/Search.css";
+import Navbar from '../Navbar/Navbar'
 
 const Search = (props) => {
   const { employees } = props;
@@ -26,6 +27,11 @@ const Search = (props) => {
   }, [employees, search]);
 
   return (
+    <div>
+    <Navbar/>
+    <br></br>
+    <br></br>
+    <br></br>
     <div className="container mt-3">
       <div className="row">
         <h1>Search Employee Directory</h1>
@@ -35,8 +41,11 @@ const Search = (props) => {
           className="form-control"
           name="search"
           type="search"
+          placeholder='search for name'
         />
         <button className="btn btn-primary">Search</button>
+        </div>
+        <div className='row' id='tableRow'>
         <table className="table">
           <thead>
             <tr>
@@ -67,6 +76,7 @@ const Search = (props) => {
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Directory/Directory.css";
 import { FaSortAlphaDown } from "react-icons/fa";
-
+import Navbar from '../Navbar/Navbar'
 
 
 const Directory = (props) => {
@@ -45,6 +45,11 @@ const Directory = (props) => {
   };
 
   return (
+    <div>
+      <Navbar/>
+      <br></br>
+      <br></br>
+      <br></br>
     <div className="container mt-3" id="directory">
       <h1>I am directory!</h1>
       <h1>Employee Directory</h1>
@@ -79,6 +84,7 @@ const Directory = (props) => {
         ))}
       </tbody>
       </table>
+    </div>
     </div>
   );
 };
