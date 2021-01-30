@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HW-14-Axios-Employee/static/css/main.a317005b.chunk.css",
-    "main.js": "/HW-14-Axios-Employee/static/js/main.03999b0c.chunk.js",
-    "main.js.map": "/HW-14-Axios-Employee/static/js/main.03999b0c.chunk.js.map",
+    "main.js": "/HW-14-Axios-Employee/static/js/main.1ca45e3b.chunk.js",
+    "main.js.map": "/HW-14-Axios-Employee/static/js/main.1ca45e3b.chunk.js.map",
     "runtime-main.js": "/HW-14-Axios-Employee/static/js/runtime-main.0251ac3b.js",
     "runtime-main.js.map": "/HW-14-Axios-Employee/static/js/runtime-main.0251ac3b.js.map",
     "static/css/2.150d169a.chunk.css": "/HW-14-Axios-Employee/static/css/2.150d169a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.676c64e8.chunk.js",
     "static/css/main.a317005b.chunk.css",
-    "static/js/main.03999b0c.chunk.js"
+    "static/js/main.1ca45e3b.chunk.js"
   ]
 }
