@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/HW-14-Axios-Employee">
           <Directory employees={employees} setEmployees={setEmployees} />
         </Route>
-        <Route exact path="/search">
+        <Route exact path="HW-14-Axios-Employee/search">
           <Search employees={employees} />
         </Route>
       </Switch>
