@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Directory from "./components/Directory/Directory";
-import Search from './components/Search/Search'
+import Search from "./components/Search/Search";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -21,16 +21,21 @@ function App() {
       });
   }, []);
 
-  return <Router className="App">
-    <Switch>
-    <Route exact path='/'>
-      <Directory employees={employees} setEmployees={setEmployees}/>
-    </Route>
-    <Route exact path='/search'>
-      <Search employees={employees} />
-    </Route>
-    </Switch>
-  </Router>;
+  return (
+    <Router className="App">
+      <Switch>
+        <Route exact path="/HW-14-Axios-Employee">
+          <Directory employees={employees} setEmployees={setEmployees} />
+        </Route>
+        <Route exact path="/HW-14-Axios-Employee">
+          <Directory employees={employees} setEmployees={setEmployees} />
+        </Route>
+        <Route exact path="/search">
+          <Search employees={employees} />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
