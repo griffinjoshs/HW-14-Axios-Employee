@@ -24,14 +24,8 @@ function App() {
   return (
     <Router className="App">
       <Switch>
-        <Route exact path="/sort">
+        <Route exact path="/">
           <Directory employees={employees} setEmployees={setEmployees} />
-        </Route>
-        <Route exact path="/sort">
-          <Directory employees={employees} setEmployees={setEmployees} />
-        </Route>
-        <Route exact path="/HW-14-Axios-Employee">
-          <Search employees={employees} />
         </Route>
       </Switch>
     </Router>

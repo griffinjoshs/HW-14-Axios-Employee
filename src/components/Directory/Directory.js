@@ -11,6 +11,10 @@ const Directory = (props) => {
   const [sortType, setSortType] = useState("ASC");
   const [search, setSearch] = useState("");
 
+  useEffect(() => {
+    setArray(filteredEmployees);
+  }, [employees, search]);
+
   const changeHandler = (event) => {
     setSearch(event.target.value);
   };
@@ -22,14 +26,6 @@ const Directory = (props) => {
       employee.name.last.toLowerCase().indexOf(search.toLowerCase()) !== -1;
       return firstNameEmployee || lastNameEmployee;
   });
-
-  useEffect(() => {
-    setArray(filteredEmployees);
-  }, [employees, search]);
-
-  useEffect(() => {
-    sortLastName();
-  }, [employees]);
 
   const sortLastName = () => {
     switch (sortType) {
@@ -110,6 +106,7 @@ const Directory = (props) => {
         ))}
       </tbody>
       </table>
+    </div>
     </div>
     </div>
     </div>
