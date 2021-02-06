@@ -28,7 +28,6 @@ const Search = (props) => {
 
   return (
     <div>
-    <Navbar/>
     <br></br>
     <br></br>
     <br></br>

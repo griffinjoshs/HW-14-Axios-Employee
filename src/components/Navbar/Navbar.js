@@ -5,14 +5,14 @@ import { Nav } from 'react-bootstrap';
 export const Navbar = () => {
   return (
     <Nav
-      activeKey="/home"
+      activeKey="/"
     //   onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
       <Nav.Item>
-        <Nav.Link href="/HW-14-Axios-Employee">Directory</Nav.Link>
+        <Nav.Link href="/sort">Directory</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="HW-14-Axios-Employee/search">Search</Nav.Link>
+        <Nav.Link href="/HW-14-Axios-Employee">Search</Nav.Link>
       </Nav.Item>
     </Nav>
   );

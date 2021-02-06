@@ -2,12 +2,30 @@ import React, { useState, useEffect } from "react";
 import "../Directory/Directory.css";
 import { FaSortAlphaDown } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar'
+import Search from "../Search/Search";
 
 
 const Directory = (props) => {
-  const { employees, setEmployees } = props;
+  const { employees } = props;
   const [array, setArray] = useState([]);
   const [sortType, setSortType] = useState("ASC");
+  const [search, setSearch] = useState("");
+
+  const changeHandler = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredEmployees = employees.filter((employee) => {
+    let firstNameEmployee =
+      employee.name.first.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+      let lastNameEmployee =
+      employee.name.last.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+      return firstNameEmployee || lastNameEmployee;
+  });
+
+  useEffect(() => {
+    setArray(filteredEmployees);
+  }, [employees, search]);
 
   useEffect(() => {
     sortLastName();
@@ -46,10 +64,18 @@ const Directory = (props) => {
 
   return (
     <div>
-      <Navbar/>
-      <br></br>
-      <br></br>
-      <br></br>
+      <div className="container mt-3">
+      <div className="row">
+      <h1>Search Employee Directory</h1>
+        <input
+          onChange={changeHandler}
+          id="search"
+          className="form-control"
+          name="search"
+          type="search"
+          placeholder='search for name'
+        />
+        <button className="btn btn-primary">Search</button>
     <div className="container mt-3" id="directory">
       <h1>I am directory!</h1>
       <h1>Employee Directory</h1>
@@ -84,6 +110,7 @@ const Directory = (props) => {
         ))}
       </tbody>
       </table>
+    </div>
     </div>
     </div>
   );
