@@ -26,9 +26,9 @@ function App() {
         <Route exact path="/AxiosEmployees">
           <Directory employees={employees} setEmployees={setEmployees} />
         </Route>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Directory employees={employees} setEmployees={setEmployees} />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );
